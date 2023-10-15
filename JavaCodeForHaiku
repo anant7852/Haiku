@@ -1,0 +1,19 @@
+import java.util.Random;
+
+public class Haiku {
+
+  public static void main(String[] args) {
+    String[] nouns = {"moonlight", "worm", "chestnut", "ocean", "mountain", "river", "sparrow", "cherry blossom", "temple", "bamboo"};
+    String[] verbs = {"digs", "sleeps", "cries", "whispers", "smiles", "laughs", "dances", "flows", "glows", "melts"};
+    String[] adjectives = {"autumn", "silent", "blue", "lonely", "peaceful", "distant", "mysterious", "gentle", "serene", "radiant"};
+
+    String line1 = adjectives[new Random().nextInt(adjectives.length)] + " " + nouns[new Random().nextInt(nouns.length)];
+    String line2 = nouns[new Random().nextInt(nouns.length)] + " " + verbs[new Random().nextInt(verbs.length)] + " " + adjectives[new Random().nextInt(adjectives.length)];
+    String line3 = nouns[new Random().nextInt(nouns.length)] + " " + adjectives[new Random().nextInt(adjectives.length)];
+
+    String haiku = line1 + "\n" + line2 + "\n" + line3;
+
+    System.out.println(haiku);
+  }
+}
+
